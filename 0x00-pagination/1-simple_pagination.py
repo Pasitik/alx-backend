@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+Defines class Server that paginates a database of popular baby names
+"""
 import csv
 import math
 from typing import List, Tuple
