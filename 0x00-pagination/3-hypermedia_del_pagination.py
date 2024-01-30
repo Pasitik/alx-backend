@@ -40,7 +40,12 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-        """ """
+        """Takes 2 integer arguments and returns a dictionary with
+        the following key-value pairs:
+            index: index of the first item in the current page
+            next_index: index of the first item in the next page
+            page_size: the current page size
+            data: actual page of the dataset """
         dataset = self.indexed_dataset()
         data_length = len(dataset)
         assert 0 <= index < data_length
