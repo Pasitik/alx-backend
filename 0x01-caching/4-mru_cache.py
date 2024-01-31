@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
     Most Recently used
 """
@@ -6,7 +7,7 @@ from base_caching import BaseCaching
 
 class MRUCache(BaseCaching):
     """
-        LRU
+        MRU
     """
     def __init__(self):
         super().__init__()
