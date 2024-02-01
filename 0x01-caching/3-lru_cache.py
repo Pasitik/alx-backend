@@ -10,10 +10,16 @@ class LRUCache(BaseCaching):
         LRU
     """
     def __init__(self):
+        """
+            Initialize the class with the parent's init method
+        """
         super().__init__()
         self.keys_list = []
 
     def put(self, key, item):
+        """
+            Cache a key-value pair
+        """
         if key is None or item is None:
             pass
         else:
@@ -29,6 +35,9 @@ class LRUCache(BaseCaching):
             self.keys_list.append(key)
 
     def get(self, key):
+        """
+            Return the value linked to a given key, or None
+        """
         if key is None or key not in self.cache_data.keys():
             return None
         if key in self.keys_list:
