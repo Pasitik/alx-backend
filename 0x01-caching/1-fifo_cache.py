@@ -10,10 +10,12 @@ class FIFOCache(BaseCaching):
         FIFO
     """
     def __init__(self):
+        """ class initialization"""
         super().__init__()
         self.keys = []
 
     def put(self, key, item):
+        """inserts item to cache"""
         if key is None or item is None:
             pass
         else:
@@ -26,6 +28,7 @@ class FIFOCache(BaseCaching):
             del self.keys[0]
 
     def get(self, key):
+        """retrieves item from cache"""
         if key is None or key not in self.cache_data.keys():
             return None
         else:
