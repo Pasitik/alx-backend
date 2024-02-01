@@ -10,10 +10,12 @@ class MRUCache(BaseCaching):
         MRU
     """
     def __init__(self):
+        """class initialization"""
         super().__init__()
         self.keys = []
 
     def put(self, key, item):
+        """updates cache"""
         if key is None or item is None:
             pass
         else:
@@ -29,6 +31,7 @@ class MRUCache(BaseCaching):
             self.keys.append(key)
 
     def get(self, key):
+        """item retrieval"""
         if key is None or key not in self.cache_data.keys():
             return None
         if key in self.keys:
